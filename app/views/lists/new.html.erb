@@ -1,0 +1,9 @@
+<h1>Create a new list</h1>
+
+<%= simple_form_for [@bookmark, @list] do |f| %>
+  <%= f.input :name %>
+  <%= f.association :movies, as: :check_boxes %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to 'Back to list', lists_path %>
